@@ -6,12 +6,23 @@
 //
 
 import UIKit
+import Alamofire
 
-class ViewController: UIViewController {
+class LoginController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    func login() {
+        
+        Alamofire.Request("http://localhost:8888/gestion-empleados/public/api/user/login",
+            method: .put,
+            parameters: ["email":"valor",
+                         "password":"valor"],
+            encoding: URLEncoding.httpBody)
+        
     }
 
 
