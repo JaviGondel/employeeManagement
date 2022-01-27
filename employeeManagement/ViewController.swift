@@ -8,23 +8,47 @@
 import UIKit
 import Alamofire
 
-class LoginController: UIViewController {
-
+class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var PasswordTextField: UITextField!
+    
+    
+    var email:String?
+    var password:String?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    func login() {
+    
+    @IBAction func loginButton(_ sender: UIButton) {
         
-        Alamofire.Request("http://localhost:8888/gestion-empleados/public/api/user/login",
-            method: .put,
-            parameters: ["email":"valor",
-                         "password":"valor"],
-            encoding: URLEncoding.httpBody)
+        
+        email = emailTextField.text
+        password = PasswordTextField.text
+        
+        
+            
+            if let email = email, let password = password {
+                let LoginUser = LoginUser(email: email, password: password)
+                
+                NetworkingProvider.shared.login(user: LoginUser) { user in
+                    //                print(user)
+                    
+                    if let user_token = user?.token {
+                        UserDefaults.standard.set(user_token, forKey: "token")
+                    }
+                } failure: { error in
+                    print(error)
+                }
+                
+                
+            }
+    }
         
     }
-
-
-}
-
