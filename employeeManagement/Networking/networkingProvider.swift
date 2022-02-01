@@ -70,4 +70,43 @@ final class NetworkingProvider {
         }
     }
     
+    //Listar usuarios ya registrados
+    
+    func employeeList(success: @escaping (_ data: [User]?, _ status: Int?)->(), failure: @escaping (_ error:Error?) ->()){
+        
+        let api_token = UserDefaults.standard.string(forKey: "token")
+        let url = "http://localhost:8888/empleados_app/public/api/list?api_token=\(api_token!)"
+        
+        AF.request(url, method: .get) .validate(statusCode: status).responseDecodable(of:ListResponse.self){
+            response in
+            
+            if let data = response.value?.data, let statusCode = response.value?.status{
+                success(data, statusCode)
+            }
+            
+            if let error = response.error{
+                failure(error)
+            }
+        }
+    }
+    
+    
+    func employeeDetail(id: Int, success: @escaping (_ data: User?, _ status: Int?) -> (), failure: @escaping (_ error:Error?) ->()){
+        
+        let api_token = UserDefaults.standard.string(forKey: "token")
+        let url = "http://localhost:8888/empleados_app/public/api/detail?api_token=\(api_token!)&id=\(id)"
+        
+        AF.request(url, method: .get).validate(statusCode: status).responseDecodable(of: Response.self) {
+            response in
+            
+            if let data = response.value?.data, let statusCode = response.value?.status {
+                success(data, statusCode)
+            }
+            
+            if let error = response.error {
+                failure(error)
+            }
+        }
+    }
+
 }

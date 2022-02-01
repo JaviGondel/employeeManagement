@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		591C28D627A9A76100163BE9 /* AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C28D527A9A76100163BE9 /* AddUser.swift */; };
+		591C28D827A9B27100163BE9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C28D727A9B27100163BE9 /* ListViewController.swift */; };
+		591C28DA27A9B49E00163BE9 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C28D927A9B49E00163BE9 /* ListViewModel.swift */; };
+		591C28DD27A9B60500163BE9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C28DB27A9B60500163BE9 /* TableViewCell.swift */; };
+		591C28DE27A9B60500163BE9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591C28DC27A9B60500163BE9 /* TableViewCell.xib */; };
+		591C28E027A9B91A00163BE9 /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C28DF27A9B91A00163BE9 /* UserDetailController.swift */; };
 		5928FEA7279848680009CC8F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5928FEA6279848680009CC8F /* Alamofire */; };
 		59692ADB27A2FE1100EF13EB /* networkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692ADA27A2FE1100EF13EB /* networkingProvider.swift */; };
 		59692ADD27A3004A00EF13EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692ADC27A3004A00EF13EB /* User.swift */; };
@@ -24,6 +29,11 @@
 
 /* Begin PBXFileReference section */
 		591C28D527A9A76100163BE9 /* AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUser.swift; sourceTree = "<group>"; };
+		591C28D727A9B27100163BE9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		591C28D927A9B49E00163BE9 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		591C28DB27A9B60500163BE9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		591C28DC27A9B60500163BE9 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		591C28DF27A9B91A00163BE9 /* UserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
 		59692ADA27A2FE1100EF13EB /* networkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkingProvider.swift; sourceTree = "<group>"; };
 		59692ADC27A3004A00EF13EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		59692ADE27A3007900EF13EB /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
@@ -91,6 +101,11 @@
 				59692AE027A3009500EF13EB /* LoginUser.swift */,
 				59692AE227A3017E00EF13EB /* response.swift */,
 				591C28D527A9A76100163BE9 /* AddUser.swift */,
+				591C28D727A9B27100163BE9 /* ListViewController.swift */,
+				591C28D927A9B49E00163BE9 /* ListViewModel.swift */,
+				591C28DB27A9B60500163BE9 /* TableViewCell.swift */,
+				591C28DC27A9B60500163BE9 /* TableViewCell.xib */,
+				591C28DF27A9B91A00163BE9 /* UserDetailController.swift */,
 			);
 			path = employeeManagement;
 			sourceTree = "<group>";
@@ -160,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59845E1E2795623B0081F5BE /* LaunchScreen.storyboard in Resources */,
+				591C28DE27A9B60500163BE9 /* TableViewCell.xib in Resources */,
 				59845E1B2795623B0081F5BE /* Assets.xcassets in Resources */,
 				59845E192795623B0081F5BE /* Main.storyboard in Resources */,
 			);
@@ -178,9 +194,13 @@
 				591C28D627A9A76100163BE9 /* AddUser.swift in Sources */,
 				59845E122795623B0081F5BE /* AppDelegate.swift in Sources */,
 				59692ADB27A2FE1100EF13EB /* networkingProvider.swift in Sources */,
+				591C28E027A9B91A00163BE9 /* UserDetailController.swift in Sources */,
 				59692ADD27A3004A00EF13EB /* User.swift in Sources */,
 				59845E142795623B0081F5BE /* SceneDelegate.swift in Sources */,
+				591C28D827A9B27100163BE9 /* ListViewController.swift in Sources */,
+				591C28DD27A9B60500163BE9 /* TableViewCell.swift in Sources */,
 				59692AE327A3017E00EF13EB /* response.swift in Sources */,
+				591C28DA27A9B49E00163BE9 /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
