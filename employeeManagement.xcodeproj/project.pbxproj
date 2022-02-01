@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591C28D627A9A76100163BE9 /* AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C28D527A9A76100163BE9 /* AddUser.swift */; };
 		5928FEA7279848680009CC8F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5928FEA6279848680009CC8F /* Alamofire */; };
 		59692ADB27A2FE1100EF13EB /* networkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692ADA27A2FE1100EF13EB /* networkingProvider.swift */; };
 		59692ADD27A3004A00EF13EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692ADC27A3004A00EF13EB /* User.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		591C28D527A9A76100163BE9 /* AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUser.swift; sourceTree = "<group>"; };
 		59692ADA27A2FE1100EF13EB /* networkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkingProvider.swift; sourceTree = "<group>"; };
 		59692ADC27A3004A00EF13EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		59692ADE27A3007900EF13EB /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				59692ADE27A3007900EF13EB /* NewUser.swift */,
 				59692AE027A3009500EF13EB /* LoginUser.swift */,
 				59692AE227A3017E00EF13EB /* response.swift */,
+				591C28D527A9A76100163BE9 /* AddUser.swift */,
 			);
 			path = employeeManagement;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				59692AE127A3009500EF13EB /* LoginUser.swift in Sources */,
 				59845E162795623B0081F5BE /* ViewController.swift in Sources */,
 				59692ADF27A3007900EF13EB /* NewUser.swift in Sources */,
+				591C28D627A9A76100163BE9 /* AddUser.swift in Sources */,
 				59845E122795623B0081F5BE /* AppDelegate.swift in Sources */,
 				59692ADB27A2FE1100EF13EB /* networkingProvider.swift in Sources */,
 				59692ADD27A3004A00EF13EB /* User.swift in Sources */,

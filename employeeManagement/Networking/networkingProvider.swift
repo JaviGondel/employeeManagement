@@ -50,7 +50,24 @@ final class NetworkingProvider {
                 failure(error)
             }
         }
+    }
+    
+    //Registrar usuarios
+    func addUser(user: AddUser, api_token: String, success: @escaping (_ msg: User?) -> (), failure: @escaping (_ error:Error?) -> ())
+    {
+        let url = "http://localhost:8888/empleados_app/public/api/create?api_token=\(api_token)"
         
+        AF.request(url, method: .put, parameters: user, encoder: JSONParameterEncoder.default).validate(statusCode: status).responseDecodable(of: Response.self) {
+            response in
+            
+            if let data = response.value?.data {
+                success(data)
+            }
+            
+            if let error = response.error {
+                failure(error)
+            }
+        }
     }
     
 }
