@@ -30,7 +30,25 @@ final class NetworkingProvider {
             if let error = response.error {
                 failure(error)
             }
+        }
+    }
+    
+    // Recuperar contraseña
+    func recoveryPassword(email: String, success: @escaping (_ user: User?) -> (), failure: @escaping (_ error:Error?) -> ())
+    {
+        let url = "http://localhost:8888/empleados_app/public/api/password?email=\(email)"
         
+        
+        AF.request(url, method: .post).validate(statusCode: status).responseDecodable(of: Response.self) {
+            response in
+            
+            if let data = response.value?.data{
+                success(data)
+            }
+            
+            if let error = response.error {
+                failure(error)
+            }
         }
         
     }
