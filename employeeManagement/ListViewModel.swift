@@ -23,7 +23,7 @@ class ListViewModel{
                     completion()
                 }
             } failure: { error in
-                print(error)
+                print(error!)
             }
         }
     

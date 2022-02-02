@@ -70,7 +70,7 @@ class ViewController: UIViewController {
                     UserDefaults.standard.set(user_token, forKey: "token")
                 }
             } failure: { error in
-                print(error)
+                print(error!)
             }
         }
     }
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
                 print("Se ha enviado al correo su nueva contraseña")
                 
             }failure: { error in
-                print(error)
+                print(error!)
             }
         }
     }
@@ -111,9 +111,9 @@ class ViewController: UIViewController {
             let api_token = UserDefaults.standard.string(forKey: "token")
             
             NetworkingProvider.shared.addUser(user: addUser, api_token: api_token!) { user in
-                print(user)
+                print(user!)
             } failure: { error in
-                print(error)
+                print(error!)
             }
         }
         

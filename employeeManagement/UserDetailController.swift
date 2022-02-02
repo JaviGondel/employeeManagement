@@ -29,9 +29,9 @@ class EmployeeDetailViewController: UIViewController {
     
     func employeeDetail() {
         NetworkingProvider.shared.employeeDetail(id: id) { data, status in
-           print(data)
+           print(data!)
         }failure: { error in
-            print(error)
+            print(error!)
         }
 
             

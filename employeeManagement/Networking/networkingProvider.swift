@@ -70,7 +70,7 @@ final class NetworkingProvider {
         }
     }
     
-    //Listar usuarios ya registrados
+    // Listar usuarios ya registrados en la BBDD
     
     func employeeList(success: @escaping (_ data: [User]?, _ status: Int?)->(), failure: @escaping (_ error:Error?) ->()){
         
@@ -90,7 +90,7 @@ final class NetworkingProvider {
         }
     }
     
-    
+    // Listar el detalle de los empleados en función de su puesto de trabajo
     func employeeDetail(id: Int, success: @escaping (_ data: User?, _ status: Int?) -> (), failure: @escaping (_ error:Error?) ->()){
         
         let api_token = UserDefaults.standard.string(forKey: "token")
