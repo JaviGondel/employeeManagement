@@ -120,7 +120,6 @@
         <!--View Controller-->
         <scene sceneID="ZQ4-Lq-B98">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hco-Pk-fmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="tWG-v9-Dyy" customClass="ViewController" customModule="employeeManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MXf-6G-LGi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -185,6 +184,7 @@
                         <outlet property="emailRecPass" destination="vdP-hG-SUG" id="D6K-8O-zJG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hco-Pk-fmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-459.4202898550725" y="781.47321428571422"/>
         </scene>
@@ -238,7 +238,7 @@
                                         <rect key="frame" x="0.0" y="190" width="374" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repita contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y0i-9t-57o">
                                         <rect key="frame" x="0.0" y="234" width="374" height="24"/>
@@ -251,7 +251,7 @@
                                         <rect key="frame" x="0.0" y="268" width="374" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puesto de trabajo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gMD-R0-6fb">
                                         <rect key="frame" x="0.0" y="312" width="374" height="24"/>
@@ -448,7 +448,7 @@
                                                         <rect key="frame" x="0.0" y="150.5" width="374" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwP-X9-AjR">
                                                         <rect key="frame" x="0.0" y="207.5" width="374" height="31"/>
