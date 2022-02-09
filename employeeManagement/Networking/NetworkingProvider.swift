@@ -108,5 +108,27 @@ final class NetworkingProvider {
             }
         }
     }
+    
+    
+    // Mostrar los datos del perfil del usuario logeado
+    func employeeProfile(success: @escaping (_ data: User?, _ status: Int?) -> (), failure: @escaping (_ error:Error?) ->()){
+        
+        let api_token = UserDefaults.standard.string(forKey: "token")
+        let url = "http://localhost:8888/empleados_app/public/api/profile?api_token=\(api_token!)"
+                
+      
+        AF.request(url, method: .get).validate(statusCode: status).responseDecodable(of: Response.self, decoder: DateDecoder()) {
+            response in
+
+            if let data = response.value?.data, let statusCode = response.value?.status {
+                success(data, statusCode)
+            }
+
+            if let error = response.error {
+                failure(error)
+            }
+        }
+    }
+
 
 }

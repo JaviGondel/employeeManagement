@@ -14,7 +14,9 @@
 		591C28DE27A9B60500163BE9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591C28DC27A9B60500163BE9 /* TableViewCell.xib */; };
 		591C28E027A9B91A00163BE9 /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C28DF27A9B91A00163BE9 /* UserDetailController.swift */; };
 		5928FEA7279848680009CC8F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5928FEA6279848680009CC8F /* Alamofire */; };
-		59692ADB27A2FE1100EF13EB /* networkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692ADA27A2FE1100EF13EB /* networkingProvider.swift */; };
+		5968650027B4464200C3D125 /* DateDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596864FF27B4464200C3D125 /* DateDecoder.swift */; };
+		5968650227B446A100C3D125 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5968650127B446A100C3D125 /* ProfileController.swift */; };
+		59692ADB27A2FE1100EF13EB /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692ADA27A2FE1100EF13EB /* NetworkingProvider.swift */; };
 		59692ADD27A3004A00EF13EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692ADC27A3004A00EF13EB /* User.swift */; };
 		59692ADF27A3007900EF13EB /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692ADE27A3007900EF13EB /* NewUser.swift */; };
 		59692AE127A3009500EF13EB /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59692AE027A3009500EF13EB /* LoginUser.swift */; };
@@ -34,7 +36,9 @@
 		591C28DB27A9B60500163BE9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		591C28DC27A9B60500163BE9 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		591C28DF27A9B91A00163BE9 /* UserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
-		59692ADA27A2FE1100EF13EB /* networkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkingProvider.swift; sourceTree = "<group>"; };
+		596864FF27B4464200C3D125 /* DateDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoder.swift; sourceTree = "<group>"; };
+		5968650127B446A100C3D125 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		59692ADA27A2FE1100EF13EB /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
 		59692ADC27A3004A00EF13EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		59692ADE27A3007900EF13EB /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 		59692AE027A3009500EF13EB /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		59692AD927A2FDEA00EF13EB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				59692ADA27A2FE1100EF13EB /* networkingProvider.swift */,
+				59692ADA27A2FE1100EF13EB /* NetworkingProvider.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -106,6 +110,8 @@
 				591C28DB27A9B60500163BE9 /* TableViewCell.swift */,
 				591C28DC27A9B60500163BE9 /* TableViewCell.xib */,
 				591C28DF27A9B91A00163BE9 /* UserDetailController.swift */,
+				596864FF27B4464200C3D125 /* DateDecoder.swift */,
+				5968650127B446A100C3D125 /* ProfileController.swift */,
 			);
 			path = employeeManagement;
 			sourceTree = "<group>";
@@ -188,12 +194,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5968650027B4464200C3D125 /* DateDecoder.swift in Sources */,
 				59692AE127A3009500EF13EB /* LoginUser.swift in Sources */,
 				59845E162795623B0081F5BE /* ViewController.swift in Sources */,
 				59692ADF27A3007900EF13EB /* NewUser.swift in Sources */,
 				591C28D627A9A76100163BE9 /* AddUser.swift in Sources */,
+				5968650227B446A100C3D125 /* ProfileController.swift in Sources */,
 				59845E122795623B0081F5BE /* AppDelegate.swift in Sources */,
-				59692ADB27A2FE1100EF13EB /* networkingProvider.swift in Sources */,
+				59692ADB27A2FE1100EF13EB /* NetworkingProvider.swift in Sources */,
 				591C28E027A9B91A00163BE9 /* UserDetailController.swift in Sources */,
 				59692ADD27A3004A00EF13EB /* User.swift in Sources */,
 				59845E142795623B0081F5BE /* SceneDelegate.swift in Sources */,

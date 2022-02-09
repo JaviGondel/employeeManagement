@@ -7,7 +7,17 @@
 
 import UIKit
 
-class EmployeeDetailViewController: UIViewController {
+class UserDetailController: UIViewController {
+    
+    // Outlets
+    
+    @IBOutlet weak var nameEmployee: UILabel!
+    @IBOutlet weak var workstationEmployee: UILabel!
+    @IBOutlet weak var biographyEmployee: UILabel!
+    @IBOutlet weak var salaryEmployee: UILabel!
+    
+    
+    
     // Variables
     
     var id: Int = 0
@@ -28,21 +38,21 @@ class EmployeeDetailViewController: UIViewController {
     
     
     func employeeDetail() {
+        
         NetworkingProvider.shared.employeeDetail(id: id) { data, status in
-           print(data!)
+            
+            if let employeeName = data?.name , let employeeEmail = data?.email , let employeeWorkstation = data?.workstation , let employeeSalary = data?.salary, let employeeBiography = data?.biography{
+            
+                self.nameEmployee.text = employeeName
+                self.workstationEmployee.text = employeeWorkstation
+                self.salaryEmployee.text = String(employeeSalary)
+                self.biographyEmployee.text = employeeBiography
+            }
+                
+            
         }failure: { error in
             print(error!)
         }
 
-            
-        
-        
-        
-//        { data, status in
-//            <#code#>
-//        } failure: { error in
-//            <#code#>
-//        }
-
-}
+    }
 }

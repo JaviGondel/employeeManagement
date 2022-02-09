@@ -24,10 +24,10 @@ struct User: Decodable{
         case name
         case email
         case password
-        case workstation
+        case workstation = "Workstation"
         case token
         case salary
-        case biography
+        case biography = "Biography"
         case msg
     }
 }

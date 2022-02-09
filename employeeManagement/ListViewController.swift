@@ -33,6 +33,14 @@ class ListViewController: UIViewController {
             self?.listTableView.reloadData()
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 extension ListViewController: UITableViewDataSource, UITableViewDelegate{
@@ -46,7 +54,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
         employee = employeeViewModel.cellForRowAt(indexPath: indexPath)
             
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "EmployeeDetail") as! EmployeeDetailViewController
+        let vc = storyBoard.instantiateViewController(withIdentifier: "EmployeeDetails") as! UserDetailController
                 
         if let id = employee?.id{
             vc.id = id
