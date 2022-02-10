@@ -55,22 +55,34 @@ class ViewController: UIViewController {
     // Función de login
     @IBAction func loginButton(_ sender: UIButton) {
         
-        
         email = emailTextField.text
         password = PasswordTextField.text
         
         
             
         if let email = email, let password = password {
+            
             let LoginUser = LoginUser(email: email, password: password)
             
             NetworkingProvider.shared.login(user: LoginUser) { user in
                 
-                if let user_token = user?.token {
-                    UserDefaults.standard.set(user_token, forKey: "token")
+                if email != user?.email || password != user?.password {
+                    self.showToast(message: "Usuario incorrecto", font: .systemFont(ofSize: 12.0))
                 }
+                
+                
+                if let user_token = user?.token {
+                    debugPrint("New Token: \(user_token)")
+                    UserDefaults.standard.set(user_token, forKey: "token")
+                    
+                    self.performSegue(withIdentifier: "loginSegue", sender: Any?.self)
+                }
+                
             } failure: { error in
                 print(error!)
+                
+                self.showToast(message: "Usuario incorrecto", font: .systemFont(ofSize: 12.0))
+                
             }
         }
     }
@@ -83,7 +95,7 @@ class ViewController: UIViewController {
         
         if let email = recoveryEmail {
             NetworkingProvider.shared.recoveryPassword(email: email){ user in
-                print("Se ha enviado al correo su nueva contraseña")
+                self.showToast(message: "Se ha enviado un correo", font: .systemFont(ofSize: 12.0))
                 
             }failure: { error in
                 print(error!)
@@ -102,9 +114,6 @@ class ViewController: UIViewController {
         salary = Int(addSalary.text!)
         biography = addBiography.text
         
-        
-        
-        
         if let name = name,let email = email, let password = password, let workstation = workstation, let salary = salary, let biography = biography   {
             let addUser = AddUser( name: name, email: email, password: password, Workstation: workstation, salary: salary, biography: biography, created_at: nil, updated_at: nil)
             
@@ -112,6 +121,9 @@ class ViewController: UIViewController {
             
             NetworkingProvider.shared.addUser(user: addUser, api_token: api_token!) { user in
                 print(user!)
+                
+                self.showToast(message: "Usuario registrado", font: .systemFont(ofSize: 12.0))
+                
             } failure: { error in
                 print(error!)
             }
@@ -119,5 +131,32 @@ class ViewController: UIViewController {
         
     }
     
-        
+    // Como el usuario en el perfil, me carga antes de guardar el token y cargar el nuevo usuario, hago el segue por código y lo llamo al iniciar sesión
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSegue"{
+            if let destination = segue.destination as? ProfileController{
+                
+            }
+        }
+    }
+    
+    func showToast(message : String, font: UIFont) {
+
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+    
 }
