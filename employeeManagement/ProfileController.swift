@@ -8,15 +8,9 @@
 import UIKit
 
 class ProfileController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        profileUser()
-    }
-
+    
     // Outlets
+    
     
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var profileWorkstation: UILabel!
@@ -31,8 +25,17 @@ class ProfileController: UIViewController {
     var profileDataSalary : Int?
     var profileDataBiography: String? = ""
 
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        profileUser()
+    }
+
     func profileUser(){
         NetworkingProvider.shared.employeeProfile { data, status in
+            debugPrint("User Profile \(data?.name)")
             if let profileName = data?.name , let profileWorkstation = data?.workstation , let profileSalary = data?.salary, let profileBiography = data?.biography{
                 
                 self.profileName.text = profileName

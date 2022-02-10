@@ -67,8 +67,12 @@ class ViewController: UIViewController {
             NetworkingProvider.shared.login(user: LoginUser) { user in
                 
                 if let user_token = user?.token {
+                    debugPrint("New Token: \(user_token)")
                     UserDefaults.standard.set(user_token, forKey: "token")
+                    
+                    self.performSegue(withIdentifier: "loginSegue", sender: Any?.self)
                 }
+                
             } failure: { error in
                 print(error!)
             }
@@ -119,5 +123,11 @@ class ViewController: UIViewController {
         
     }
     
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSegue"{
+            if let destination = segue.destination as? ProfileController{
+                
+            }
+        }
+    }
 }

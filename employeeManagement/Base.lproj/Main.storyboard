@@ -124,7 +124,7 @@
                     <navigationItem key="navigationItem" id="dey-yF-oiG"/>
                     <connections>
                         <outlet property="profileBiography" destination="bmz-Mv-pQE" id="eMX-wR-N8z"/>
-                        <outlet property="profileName" destination="O5M-V0-oNy" id="NIS-Xk-ZbK"/>
+                        <outlet property="profileName" destination="Dj4-LT-CWd" id="SCd-zl-E9V"/>
                         <outlet property="profileSalary" destination="bGe-Wn-Htw" id="8vW-SX-XmG"/>
                         <outlet property="profileWorkstation" destination="O5M-V0-oNy" id="kap-6v-CXb"/>
                     </connections>
@@ -447,7 +447,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loginButton:" destination="noU-Ql-VNR" eventType="touchUpInside" id="N0g-jW-3r3"/>
-                                                    <segue destination="4XJ-yr-f5x" kind="show" id="bL2-wd-gu2"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nwu-3v-i9t">
@@ -533,6 +532,7 @@
                     <connections>
                         <outlet property="PasswordTextField" destination="N3e-vM-5en" id="5b6-Tg-5FQ"/>
                         <outlet property="emailTextField" destination="vaO-Nc-u4B" id="3Ta-t0-gOc"/>
+                        <segue destination="4XJ-yr-f5x" kind="presentation" identifier="loginSegue" id="1BX-ws-vVv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJd-M5-PzI" sceneMemberID="firstResponder"/>
