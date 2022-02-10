@@ -35,7 +35,6 @@ class ProfileController: UIViewController {
 
     func profileUser(){
         NetworkingProvider.shared.employeeProfile { data, status in
-            debugPrint("User Profile \(data?.name)")
             if let profileName = data?.name , let profileWorkstation = data?.workstation , let profileSalary = data?.salary, let profileBiography = data?.biography{
                 
                 self.profileName.text = profileName
