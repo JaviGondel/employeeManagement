@@ -100,6 +100,9 @@
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Cerrar sesión"/>
+                                <connections>
+                                    <segue destination="noU-Ql-VNR" kind="show" id="0hc-K1-wv3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="71I-YR-nZa"/>
@@ -134,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTa-K1-fm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428.98550724637687" y="18.75"/>
+            <point key="canvasLocation" x="429" y="19"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZQ4-Lq-B98">
