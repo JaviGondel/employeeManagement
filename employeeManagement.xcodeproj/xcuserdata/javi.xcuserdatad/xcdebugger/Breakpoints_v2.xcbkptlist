@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2D5C1048-DDB7-41BE-8632-FA901D8D8219"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C510DD80-3324-412C-8901-AAE42118A90A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "employeeManagement/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "addUser(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8D4AA18-1A76-4DC6-9C16-C64569B49DDA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "employeeManagement/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "addUser(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B8D4AA18-1A76-4DC6-9C16-C64569B49DDA - b4c45a3912635d8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "employeeManagement.ViewController.addUser(__C.UIButton) -&gt; ()"
+                  moduleName = "employeeManagement"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/javi/Desktop/Grado/Segundo/iOS/Tareas/Employee%20Manager/employeeManagement/employeeManagement/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "2020">
+               </Location>
+               <Location
+                  uuid = "B8D4AA18-1A76-4DC6-9C16-C64569B49DDA - b4c45a3912635d8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "employeeManagement.ViewController.addUser(__C.UIButton) -&gt; ()"
+                  moduleName = "employeeManagement"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/javi/Desktop/Grado/Segundo/iOS/Tareas/Employee%20Manager/employeeManagement/employeeManagement/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "2072">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

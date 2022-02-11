@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     // Añadir usuario
     var name:String?
     var workstation: String?
-    var salary: Int?
+    var salary: String?
     var biography: String?
     
     
@@ -81,8 +81,6 @@ class ViewController: UIViewController {
             } failure: { error in
                 print(error!)
                 
-                self.showToast(message: "Usuario incorrecto", font: .systemFont(ofSize: 12.0))
-                
             }
         }
     }
@@ -95,7 +93,18 @@ class ViewController: UIViewController {
         
         if let email = recoveryEmail {
             NetworkingProvider.shared.recoveryPassword(email: email){ user in
-                self.showToast(message: "Se ha enviado un correo", font: .systemFont(ofSize: 12.0))
+                
+                if self.emailRecPass.text == "" {
+                    let alert = UIAlertController(title: "Error", message: "Por favor escriba una dirección de correo", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                if (user?.email == nil) {
+                    let alert = UIAlertController(title: "Email enviado", message: "Se ha enviado el email correctamente a la dirección solicitada", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
                 
             }failure: { error in
                 print(error!)
@@ -111,24 +120,37 @@ class ViewController: UIViewController {
         email = addEmail.text
         password = addPass.text
         workstation = addWorkstation.text
-        salary = Int(addSalary.text!)
+        salary = addSalary.text
         biography = addBiography.text
         
-        if let name = name,let email = email, let password = password, let workstation = workstation, let salary = salary, let biography = biography   {
-            let addUser = AddUser( name: name, email: email, password: password, Workstation: workstation, salary: salary, biography: biography, created_at: nil, updated_at: nil)
+        if let name = name, let email = email, let password = password, let workstation = workstation, let salary = salary, let biography = biography   {
             
-            let api_token = UserDefaults.standard.string(forKey: "token")
-            
-            NetworkingProvider.shared.addUser(user: addUser, api_token: api_token!) { user in
-                print(user!)
+            if (name != "" || email != "" || password != "" || workstation != "" || addSalary.text != "" || biography != "") {
                 
-                self.showToast(message: "Usuario registrado", font: .systemFont(ofSize: 12.0))
+                let salaryInt = Int(salary)
+               
+                let addUser = AddUser( name: name, email: email, password: password, Workstation: workstation, salary: salaryInt, biography: biography, created_at: nil, updated_at: nil)
                 
-            } failure: { error in
-                print(error!)
+                let api_token = UserDefaults.standard.string(forKey: "token")
+                
+                
+                
+                NetworkingProvider.shared.addUser(user: addUser, api_token: api_token!) { user in
+                    print(user!)
+                    let alert = UIAlertController(title: "Usuario registrado", message: "El usuario se ha registrado correctamente", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
+                } failure: { error in
+                    print(error!)
+                }
+                
+            } else {
+                let alert = UIAlertController(title: "Error", message: "Error al registrar el nuevo usuario", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
-        
     }
     
     // Como el usuario en el perfil, me carga antes de guardar el token y cargar el nuevo usuario, hago el segue por código y lo llamo al iniciar sesión
